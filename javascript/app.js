@@ -199,6 +199,7 @@ for (let h = 0; h < 3; h++){
 		// test randomValue
 		console.log("Random value2 is " + randomValue2);
 		// remove item from drawer and put it into outfitComboThom
+		//vv SOMETHING WRONG with array length!
 		outfitComboThom.push(thomsCloset[randomValue2].splice(randomValue2, 1));
 	}
 	// to keep track of array
@@ -210,6 +211,30 @@ for (let h = 0; h < 3; h++){
 //^^Something's missing problem with array lengths I think
 
 
+// DIRTY LAUNDRY
+// Continue looking at the closet arrays:
+// 1. Time to do laundry - loop through Kristyn's closet and log the sentence "WHIRR: Now washing (item)" for each item in the array.
+const kristynsClosetLaundry = [
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "GA hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps"
+];
+
+for (let i = 0; i < kristynsClosetLaundry.length; i++) {
+	console.log(`WHIRR: Now washing ${kristynsClosetLaundry[i]}.`);
+}
+
+// Inventory
+// 2. Thom wants to do inventory on his closet. Using bracket notation, log the arrays (not the elements in the arrays) containing all of Thom's shirts, pants, and accessories.
+
+// Not sure I understand the question. If you don't log what's inside, what are you logging?
+for (let i = 0; i < thomsCloset.length; i++) {
+	console.log(`Thom's Inventory: ${thomsCloset[i]}.`);
+}
 
 
 
