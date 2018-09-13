@@ -127,7 +127,6 @@ const kristynsCloset = [
   "yellow knit hat",
   "marshmallow peeps"
 ];
-
 // Thom's closet is more complicated. Check out this nested data structure!!
 const thomsCloset = [
   [
@@ -148,21 +147,39 @@ const thomsCloset = [
     "raybans"
   ]
 ];
+
 // Alien Attire
 // 1. Kristyn's left shoe has traveled through time and space and turned up in Thom's accessories drawer! Remove Kristyn's shoe from the array and save it to the variable kristynsShoe. Use that variable to add Kristyn's lost shoe to Thom's accessories array.
+
+// take the value (its an object)
 let kristynsShoe = kristynsCloset.splice(0, 1);
+// turn it into a string;
 kristynsShoe = kristynsShoe[0];
-console.log(kristynsShoe, typeof(kristynsShoe));
+// add to thom's accessories
 thomsCloset[2].push(kristynsShoe);
+// print to make sure
 console.log(kristynsCloset, thomsCloset);
+
 // Dress 'em Up
-// Modify your code to put together 3 separate outfits for Kristyn and Thom. Put the output in a sentence to tell us what we'll be wearing. Mix and match!
+// 1. Modify your code to put together 3 separate outfits for Kristyn and Thom. Put the output in a sentence to tell us what we'll be wearing. Mix and match!
 
-
-
-
-
-
+// KRISTYN
+// outfit combo declaration
+let outfitCombo = [];
+// three possible outfits
+for (let h = 0; h < 3; h++){
+	// pick three pieces for one outfit
+	for (let i = 0; i < 3; i++) {
+		// at random
+		let randomValue = Math.floor(Math.random() * (kristynsCloset.length));
+		// test randomValue
+		console.log("Random value is " + randomValue);
+		// remove item from closet and put it into outfitCombo
+		outfitCombo.push(kristynsCloset.splice(randomValue, 1));
+	}
+	console.log(outfitCombo);
+	console.log(`Today Kristyn might wear ${outfitCombo[0]}, ${outfitCombo[1]}, and ${outfitCombo[2]}.`);
+}
 
 
 
