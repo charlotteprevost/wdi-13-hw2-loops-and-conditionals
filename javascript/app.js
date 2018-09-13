@@ -165,25 +165,49 @@ console.log(kristynsCloset, thomsCloset);
 
 // KRISTYN
 // outfit combo declaration
-let outfitCombo = [];
+let outfitComboKristyn = [];
 // three possible outfits
 for (let h = 0; h < 3; h++){
-	// pick three pieces for one outfit
-	for (let i = 0; i < 3; i++) {
+	// pick two pieces for one outfit
+	for (let i = 0; i < 2; i++) {
 		// at random
-		let randomValue = Math.floor(Math.random() * (kristynsCloset.length));
+		let randomValue = Math.floor(Math.random() * (kristynsCloset.length - outfitComboKristyn.length));
 		// test randomValue
 		console.log("Random value is " + randomValue);
-		// remove item from closet and put it into outfitCombo
-		outfitCombo.push(kristynsCloset.splice(randomValue, 1));
+		// remove item from closet and put it into outfitComboKristyn
+		outfitComboKristyn.push(kristynsCloset.splice(randomValue, 1));
 	}
-	console.log(outfitCombo);
-	console.log(`Today Kristyn might wear ${outfitCombo[0]}, ${outfitCombo[1]}, and ${outfitCombo[2]}.`);
+	// to keep track of array
+	// console.log(outfitComboKristyn);
+	console.log(`Today Kristyn might wear ${outfitComboKristyn[0]} and ${outfitComboKristyn[1]}.`);
+	outfitComboKristyn = [];
 }
 
-
-
-
+// THOM
+// outfit combo declaration
+let outfitComboThom = [];
+// three possible outfits
+for (let h = 0; h < 3; h++){
+	// pick two pieces for one outfit
+	for (let i = 0; i < 2; i++) {
+		// random number to choose which drawer to take from
+		let randomValue = Math.floor(Math.random() * 2);
+		// test randomValue
+		console.log("Random value is " + randomValue);
+		// random number to choose which ITEM to take in drawer
+		let randomValue2 = Math.floor(Math.random() * (thomsCloset[randomValue].length - 1));
+		// test randomValue
+		console.log("Random value2 is " + randomValue2);
+		// remove item from drawer and put it into outfitComboThom
+		outfitComboThom.push(thomsCloset[randomValue2].splice(randomValue2, 1));
+	}
+	// to keep track of array
+	// console.log(outfitComboThom);
+	console.log(`Today Thom might wear ${outfitComboThom[0]} and ${outfitComboThom[1]}.`);
+	outfitComboThom = [];
+	console.log(thomsCloset);
+}
+//^^Something's missing problem with array lengths I think
 
 
 
