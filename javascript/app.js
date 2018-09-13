@@ -293,6 +293,43 @@ const upsideDownRight = (argument4) => {
 upsideDownRight(argument4);
 
 
+// Find the Median
+// Find the median number in the following nums array, then console.log that number.
+// hint this will likely involve breaking down the problem into a few steps
+// hint: Click "Details" below (don't read this unless you've been stuck for a while)
+// Details
+const nums = [14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12, 17, 12, 71, 18, 15, 12];
+
+const median = (numbers) => {
+// rearrange numbers in order
+	numbers.sort(function(a, b) {return a - b;} );
+	// find middle value of array
+	var middle = Math.floor(numbers.length / 2);
+	// if there is an odd number of numbers in the array, all good!
+	if (numbers.length % 2) {
+		return numbers[middle];
+	} else {
+		// adjusted medium if number of numbers is even
+		return (numbers[middle - 1] + values[middle]) / 2.0;
+	}
+}
+console.log(median(nums));
+// Expected output:
+// => 15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
